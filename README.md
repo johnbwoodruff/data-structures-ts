@@ -2,6 +2,8 @@
 
 A collection of data structures, built using TypeScript, built in my spare time for no reason other than fun. Why did I release it as an npm package? Again, just for fun.
 
+This collection will likely never contain all the common data structures, I'll just add them one at a time when I'm bored.
+
 ## Usage
 
 Don't try to use this in anything even remotely resembling production. For testing or fun, sure, knock yourself out. Otherwise, use the stuff that already exists that is far better.
