@@ -1,8 +1,13 @@
 {
   "name": "typescript-data-structures",
+  "description": "A collection of data structures, built using TypeScript.",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
+  "author": {
+    "name": "John Woodruff",
+    "email": "johnwoodruff91@gmail.com"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "test": "jest --coverage",
