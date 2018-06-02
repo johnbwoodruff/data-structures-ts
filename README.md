@@ -15,7 +15,7 @@ If you really really really want to use this, then feel free.
 Installation:
 
 ```shell
-$ npm install typescript-data-structures
+$ npm install data-structures-ts
 ```
 
 Code usage:
