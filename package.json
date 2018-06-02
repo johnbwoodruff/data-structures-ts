@@ -8,6 +8,10 @@
     "name": "John Woodruff",
     "email": "johnwoodruff91@gmail.com"
   },
+  "bugs": {
+    "url": "https://github.com/jbw91/typescript-data-structures/issues"
+  },
+  "repository": "https://github.com/jbw91/typescript-data-structures",
   "scripts": {
     "clean": "rimraf dist",
     "test": "jest --coverage",
