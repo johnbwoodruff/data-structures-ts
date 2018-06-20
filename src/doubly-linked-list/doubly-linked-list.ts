@@ -1,11 +1,9 @@
 import { List } from '../interfaces/list';
 import { Node } from './node';
 
-/**
- * Singly Linked List
- */
-export class LinkedList<T> implements List<T> {
+export class DoublyLinkedList<T> implements List<T> {
   private head: Node<T> = null;
+  private tail: Node<T> = null;
 
   getFirst(): T {
     if (!this.head) {
@@ -15,14 +13,10 @@ export class LinkedList<T> implements List<T> {
   }
 
   getLast(): T {
-    if (!this.head) {
+    if (!this.tail) {
       throw new Error('Index out of bounds');
     }
-    let currentNode = this.head;
-    while (currentNode.next) {
-      currentNode = currentNode.next;
-    }
-    return currentNode.val;
+    return this.tail.val;
   }
 
   removeFirst(): void {
@@ -30,28 +24,25 @@ export class LinkedList<T> implements List<T> {
       throw new Error('Index out of bounds');
     }
     if (this.head.next == null) {
+      // Only one item in list
       this.head = null;
+      this.tail = null;
     } else {
       this.head = this.head.next;
     }
   }
 
   removeLast(): void {
-    if (!this.head) {
-      // Empty List
+    if (!this.tail) {
       throw new Error('Index out of bounds');
     }
-    if (!this.head.next) {
-      // Only one item in the list
+    if (this.tail.prev == null) {
+      // Only one item in list
+      this.tail = null;
       this.head = null;
     } else {
-      let currentNode = this.head;
-      let prevNode;
-      while (currentNode.next) {
-        prevNode = currentNode;
-        currentNode = currentNode.next;
-      }
-      prevNode.next = null;
+      this.tail = this.tail.prev;
+      this.tail.next = null;
     }
   }
 
@@ -61,18 +52,22 @@ export class LinkedList<T> implements List<T> {
       newNode.next = this.head;
     }
     this.head = newNode;
+    if (!this.tail) {
+      // This is the first node, so assign tail as well.
+      this.tail = this.head;
+    }
   }
 
   addLast(val: T): void {
     const newNode = new Node(val);
+    if (this.tail) {
+      this.tail.next = newNode;
+      newNode.prev = this.tail;
+    }
+    this.tail = newNode;
     if (!this.head) {
+      // This is the first node, so assign tail as well.
       this.head = newNode;
-    } else {
-      let currentNode = this.head;
-      while (currentNode.next) {
-        currentNode = currentNode.next;
-      }
-      currentNode.next = newNode;
     }
   }
 
@@ -114,6 +109,7 @@ export class LinkedList<T> implements List<T> {
   }
 
   remove(index: number): void {
+    // TODO: Start at head or tail based on index compared to size
     // Error cases
     if (!this.head) {
       throw new Error('List is empty');
@@ -140,6 +136,7 @@ export class LinkedList<T> implements List<T> {
   }
 
   get(index: number): T {
+    // TODO: Start at head or tail based on index compared to size
     // Error cases
     if (!this.head) {
       throw new Error('List is empty');
@@ -160,6 +157,7 @@ export class LinkedList<T> implements List<T> {
   }
 
   set(index: number, val: T): T {
+    // TODO: Start at head or tail based on index compared to size
     // Returns the value previously at the specified position
     let prev = null;
     if (index < 0 || index >= this.size()) {
@@ -184,6 +182,7 @@ export class LinkedList<T> implements List<T> {
 
   clear(): void {
     this.head = null;
+    this.tail = null;
   }
 
   indexOf(val: T): number {
