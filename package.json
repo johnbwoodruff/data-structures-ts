@@ -1,7 +1,7 @@
 {
   "name": "data-structures-ts",
   "description": "A collection of data structures, built using TypeScript.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "dist/index.js",
   "license": "MIT",
   "author": {
@@ -16,7 +16,7 @@
     "clean": "rimraf dist",
     "test": "jest --coverage",
     "postinstall": "node postinstall.js",
-    "build": "npm run clean && tsc --project tsconfig.json"
+    "build": "npm test && npm run clean && tsc --project tsconfig.json"
   },
   "devDependencies": {
     "@types/jest": "^22.2.3",
