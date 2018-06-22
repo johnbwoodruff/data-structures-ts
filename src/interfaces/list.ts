@@ -15,13 +15,13 @@ export interface List<T> {
 
   size(): number;
 
-  add(val: T, index?: number): void;
+  add(val: T): void;
 
   remove(index: number): void;
 
   get(index: number): T;
 
-  set(index: number, val: T): void;
+  set(index: number, val: T): T;
 
   clear(): void;
 

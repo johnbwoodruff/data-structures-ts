@@ -16,14 +16,18 @@
     "clean": "rimraf dist",
     "test": "jest --coverage",
     "postinstall": "node postinstall.js",
-    "build": "npm test && npm run clean && tsc --project tsconfig.json"
+    "build": "npm test && npm run clean && tsc --project tsconfig.json",
+    "docs": "rimraf docs && typedoc src/ --target ES6 --mode file --exclude \"**/*.spec.ts\" --out docs",
+    "docs:dev": "npm run docs && http-server ./docs -o"
   },
   "devDependencies": {
     "@types/jest": "^22.2.3",
+    "http-server": "^0.11.1",
     "jest": "^23.1.0",
     "rimraf": "^2.6.2",
     "ts-jest": "^22.4.6",
     "ts-node": "^6.0.5",
+    "typedoc": "^0.11.1",
     "typescript": "^2.8.4"
   },
   "jest": {
