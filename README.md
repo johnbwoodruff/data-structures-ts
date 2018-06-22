@@ -31,7 +31,7 @@ list.add('Hello');
 
 ## Documentation
 
-No docs at the moment. Down the road, maybe, we'll see. For now, just read the source. There are also TypeScript definition files.
+This project has documentation just in case you decide, against all my warnings, to use this anyway for some weird reason, you're welcome to check out the project's [Documentation](https://jbw91.github.io/data-structures-ts/).
 
 ## Developing
 
