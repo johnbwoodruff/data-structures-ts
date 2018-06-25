@@ -1,5 +1,5 @@
+import { Node } from '../common/double-node';
 import { List } from '../interfaces/list';
-import { Node } from './node';
 
 export class DoublyLinkedList<T> implements List<T> {
   private head: Node<T> = null;

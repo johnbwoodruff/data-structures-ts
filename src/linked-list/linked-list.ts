@@ -1,5 +1,5 @@
+import { Node } from '../common/single-node';
 import { List } from '../interfaces/list';
-import { Node } from './node';
 
 /**
  * Singly Linked List

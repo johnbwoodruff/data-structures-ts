@@ -1,4 +1,4 @@
-import { Node } from './node';
+import { Node } from '../common/single-node';
 
 export class Stack<T> {
   private top: Node<T> = null;
