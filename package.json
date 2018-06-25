@@ -14,7 +14,7 @@
   "repository": "https://github.com/jbw91/data-structures-ts",
   "scripts": {
     "clean": "rimraf dist",
-    "test": "jest --coverage --coverageReporters=text-lcov",
+    "test": "rimraf coverage && jest --coverage",
     "test:ci": "npm test && npm run report:coverage",
     "report:coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "postinstall": "node postinstall.js",
@@ -34,6 +34,7 @@
     "typescript": "^2.8.4"
   },
   "jest": {
+    "collectCoverage": true,
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
