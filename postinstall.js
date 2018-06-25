@@ -1,4 +1,4 @@
-console.log('WARNING: You are using typescript-data-structures');
+console.log('WARNING: You are using data-structures-ts');
 console.log(
   'WARNING: Unless this is just for fun, you should not be using this library'
 );

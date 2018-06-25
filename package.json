@@ -1,7 +1,7 @@
 {
   "name": "data-structures-ts",
   "description": "A collection of data structures, built using TypeScript.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "main": "dist/index.js",
   "license": "MIT",
   "author": {
@@ -9,9 +9,9 @@
     "email": "johnwoodruff91@gmail.com"
   },
   "bugs": {
-    "url": "https://github.com/jbw91/typescript-data-structures/issues"
+    "url": "https://github.com/jbw91/data-structures-ts/issues"
   },
-  "repository": "https://github.com/jbw91/typescript-data-structures",
+  "repository": "https://github.com/jbw91/data-structures-ts",
   "scripts": {
     "clean": "rimraf dist",
     "test": "jest --coverage",

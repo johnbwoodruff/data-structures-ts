@@ -1,6 +1,6 @@
 # TypeScript Data Structures
 
-[![Build Status](https://travis-ci.com/jbw91/typescript-data-structures.svg?branch=master)](https://travis-ci.com/jbw91/typescript-data-structures)
+[![Build Status](https://travis-ci.com/jbw91/data-structures-ts.svg?branch=master)](https://travis-ci.com/jbw91/data-structures-ts)
 [![npm](https://img.shields.io/npm/v/data-structures-ts.svg)](https://www.npmjs.com/package/data-structures-ts)
 
 A collection of data structures, built using TypeScript, built in my spare time for no reason other than fun. Why did I release it as an npm package? Again, just for fun.
@@ -22,7 +22,7 @@ $ npm install data-structures-ts
 Code usage:
 
 ```typescript
-import { LinkedList } from 'typescript-data-structures';
+import { LinkedList } from 'data-structures-ts';
 
 const list = new LinkedList();
 list.add('Hello');
