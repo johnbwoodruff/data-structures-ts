@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Node | data-structures-ts</title>
+	<title>Queue | data-structures-ts</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="node.html">Node</a>
+					<a href="queue.html">Queue</a>
 				</li>
 			</ul>
-			<h1>Class Node&lt;T, T&gt;</h1>
+			<h1>Class Queue&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -72,16 +72,13 @@
 					<li>
 						<h4>T</h4>
 					</li>
-					<li>
-						<h4>T</h4>
-					</li>
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Node</span>
+						<span class="target">Queue</span>
 					</li>
 				</ul>
 			</section>
@@ -89,36 +86,79 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Constructors</h3>
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="node.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="queue.html#back" class="tsd-kind-icon">back</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="queue.html#front" class="tsd-kind-icon">front</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="node.html#next" class="tsd-kind-icon">next</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="node.html#prev" class="tsd-kind-icon">prev</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="node.html#val" class="tsd-kind-icon">val</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="queue.html#dequeue" class="tsd-kind-icon">dequeue</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="queue.html#enqueue" class="tsd-kind-icon">enqueue</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="queue.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="queue.html#peek" class="tsd-kind-icon">peek</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="queue.html#size" class="tsd-kind-icon">size</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="back" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> back</h3>
+					<div class="tsd-signature tsd-kind-icon">back<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Node</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/jbw91/typescript-data-structures/blob/00c464e/src/queue/queue.ts#L4">queue/queue.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="front" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> front</h3>
+					<div class="tsd-signature tsd-kind-icon">front<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Node</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/jbw91/typescript-data-structures/blob/00c464e/src/queue/queue.ts#L5">queue/queue.ts:5</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-					<a name="constructor" class="tsd-anchor"></a>
-					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Node<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="node.html" class="tsd-signature-type">Node</a></li>
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="dequeue" class="tsd-anchor"></a>
+					<h3>dequeue</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">dequeue<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jbw91/typescript-data-structures/blob/00c464e/src/common/double-node.ts#L4">common/double-node.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/jbw91/typescript-data-structures/blob/00c464e/src/queue/queue.ts#L18">queue/queue.ts:18</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="enqueue" class="tsd-anchor"></a>
+					<h3>enqueue</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">enqueue<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jbw91/typescript-data-structures/blob/00c464e/src/queue/queue.ts#L7">queue/queue.ts:7</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -127,44 +167,60 @@
 									<h5>val: <span class="tsd-signature-type">T</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="node.html" class="tsd-signature-type">Node</a></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="next" class="tsd-anchor"></a>
-					<h3>next</h3>
-					<div class="tsd-signature tsd-kind-icon">next<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Node</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/jbw91/typescript-data-structures/blob/00c464e/src/common/double-node.ts#L4">common/double-node.ts:4</a></li>
-							<li>Defined in <a href="https://github.com/jbw91/typescript-data-structures/blob/00c464e/src/common/single-node.ts#L3">common/single-node.ts:3</a></li>
-						</ul>
-					</aside>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isempty" class="tsd-anchor"></a>
+					<h3>is<wbr>Empty</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Empty<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jbw91/typescript-data-structures/blob/00c464e/src/queue/queue.ts#L53">queue/queue.ts:53</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="prev" class="tsd-anchor"></a>
-					<h3>prev</h3>
-					<div class="tsd-signature tsd-kind-icon">prev<span class="tsd-signature-symbol">:</span> <a href="node.html" class="tsd-signature-type">Node</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/jbw91/typescript-data-structures/blob/00c464e/src/common/double-node.ts#L3">common/double-node.ts:3</a></li>
-						</ul>
-					</aside>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="peek" class="tsd-anchor"></a>
+					<h3>peek</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">peek<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jbw91/typescript-data-structures/blob/00c464e/src/queue/queue.ts#L33">queue/queue.ts:33</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="val" class="tsd-anchor"></a>
-					<h3>val</h3>
-					<div class="tsd-signature tsd-kind-icon">val<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/jbw91/typescript-data-structures/blob/00c464e/src/common/double-node.ts#L2">common/double-node.ts:2</a></li>
-							<li>Defined in <a href="https://github.com/jbw91/typescript-data-structures/blob/00c464e/src/common/single-node.ts#L2">common/single-node.ts:2</a></li>
-						</ul>
-					</aside>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="size" class="tsd-anchor"></a>
+					<h3>size</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jbw91/typescript-data-structures/blob/00c464e/src/queue/queue.ts#L40">queue/queue.ts:40</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -184,30 +240,39 @@
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="linkedlist.html" class="tsd-kind-icon">Linked<wbr>List</a>
 					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="node.html" class="tsd-kind-icon">Node</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-has-type-parameter">
-						<a href="node.html" class="tsd-kind-icon">Node</a>
+						<a href="queue.html" class="tsd-kind-icon">Queue</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="node.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="queue.html#back" class="tsd-kind-icon">back</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="node.html#next" class="tsd-kind-icon">next</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="queue.html#front" class="tsd-kind-icon">front</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="node.html#prev" class="tsd-kind-icon">prev</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="queue.html#dequeue" class="tsd-kind-icon">dequeue</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="node.html#val" class="tsd-kind-icon">val</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="queue.html#enqueue" class="tsd-kind-icon">enqueue</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="queue.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="queue.html#peek" class="tsd-kind-icon">peek</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="queue.html#size" class="tsd-kind-icon">size</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="queue.html" class="tsd-kind-icon">Queue</a>
-					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="stack.html" class="tsd-kind-icon">Stack</a>
 					</li>
