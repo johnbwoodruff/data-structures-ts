@@ -16,7 +16,7 @@
     "clean": "rimraf dist",
     "test": "jest --coverage --coverageReporters=text-lcov",
     "test:ci": "npm test && npm run report:coverage",
-    "report:coverage": "cat coverage/lcov.info | coveralls",
+    "report:coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "postinstall": "node postinstall.js",
     "build": "npm test && npm run clean && tsc --project tsconfig.json",
     "docs": "rimraf docs && typedoc src/ --target ES6 --mode file --exclude \"**/*.spec.ts\" --out docs",
