@@ -1,7 +1,7 @@
 # TypeScript Data Structures
 
-[![Build Status](https://travis-ci.com/jbw91/data-structures-ts.svg?branch=master)](https://travis-ci.com/jbw91/data-structures-ts)
-[![Coverage Status](https://coveralls.io/repos/github/jbw91/data-structures-ts/badge.svg?branch=master)](https://coveralls.io/github/jbw91/data-structures-ts?branch=master)
+[![Build Status](https://travis-ci.com/johnbwoodruff/data-structures-ts.svg?branch=master)](https://travis-ci.com/johnbwoodruff/data-structures-ts)
+[![Coverage Status](https://coveralls.io/repos/github/johnbwoodruff/data-structures-ts/badge.svg?branch=master)](https://coveralls.io/github/johnbwoodruff/data-structures-ts?branch=master)
 [![npm](https://img.shields.io/npm/v/data-structures-ts.svg)](https://www.npmjs.com/package/data-structures-ts)
 
 A collection of data structures, built using TypeScript, built in my spare time for no reason other than fun. Why did I release it as an npm package? Again, just for fun.
@@ -32,7 +32,7 @@ list.add('Hello');
 
 ## Documentation
 
-This project has documentation just in case you decide, against all my warnings, to use this anyway for some weird reason, you're welcome to check out the project's [Documentation](https://jbw91.github.io/data-structures-ts/).
+This project has documentation just in case you decide, against all my warnings, to use this anyway for some weird reason, you're welcome to check out the project's [Documentation](https://johnbwoodruff.github.io/data-structures-ts/).
 
 ## Developing
 
