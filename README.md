@@ -1,6 +1,6 @@
 # TypeScript Data Structures
 
-[![CI](https://github.com/johnbwoodruff/data-structures-ts/workflows/CI/badge.svg)](https://github.com/johnbwoodruff/data-structures-ts/actions)
+[![CI](https://github.com/johnbwoodruff/data-structures-ts/actions/workflows/ci.yml/badge.svg)](https://github.com/johnbwoodruff/data-structures-ts/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/data-structures-ts.svg)](https://www.npmjs.com/package/data-structures-ts)
 
 A collection of data structures, built using TypeScript, built in my spare time for no reason other than fun. Why did I release it as an npm package? Again, just for fun. Why did I update it in 2025 to modernize the tooling? You guessed it. Fun.
