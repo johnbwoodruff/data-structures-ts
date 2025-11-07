@@ -17,7 +17,7 @@
     "test": "rimraf coverage && jest --coverage",
     "postinstall": "node postinstall.js",
     "build": "npm test && npm run clean && tsc --project tsconfig.json",
-    "docs": "rimraf docs && typedoc src/ --target ES6 --mode file --exclude \"**/*.spec.ts\" --out docs",
+    "docs": "rimraf docs && typedoc src/ --exclude \"**/*.spec.ts\" --out docs",
     "docs:dev": "npm run docs && http-server ./docs -o"
   },
   "devDependencies": {

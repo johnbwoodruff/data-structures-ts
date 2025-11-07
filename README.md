@@ -3,7 +3,7 @@
 [![CI](https://github.com/johnbwoodruff/data-structures-ts/workflows/CI/badge.svg)](https://github.com/johnbwoodruff/data-structures-ts/actions)
 [![npm](https://img.shields.io/npm/v/data-structures-ts.svg)](https://www.npmjs.com/package/data-structures-ts)
 
-A collection of data structures, built using TypeScript, built in my spare time for no reason other than fun. Why did I release it as an npm package? Again, just for fun.
+A collection of data structures, built using TypeScript, built in my spare time for no reason other than fun. Why did I release it as an npm package? Again, just for fun. Why did I update it in 2025 to modernize the tooling? You guessed it. Fun.
 
 This collection will likely never contain all the common data structures, I'll just add them one at a time when I'm bored.
 
