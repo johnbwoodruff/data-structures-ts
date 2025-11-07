@@ -2,11 +2,18 @@ import { Node } from '../common/single-node';
 import { List } from '../interfaces/list';
 
 /**
- * Singly Linked List
+ * A singly linked list data structure.
+ * Each element points to the next element in the sequence.
+ * @typeparam T - The type of elements stored in the list
  */
 export class LinkedList<T> implements List<T> {
   private head: Node<T> = null;
 
+  /**
+   * Returns the first element in the list.
+   * @returns The first element
+   * @throws Error if the list is empty
+   */
   getFirst(): T {
     if (!this.head) {
       throw new Error('Index out of bounds');
@@ -14,6 +21,12 @@ export class LinkedList<T> implements List<T> {
     return this.head.val;
   }
 
+  /**
+   * Returns the last element in the list.
+   * Traverses the entire list to find the last element.
+   * @returns The last element
+   * @throws Error if the list is empty
+   */
   getLast(): T {
     if (!this.head) {
       throw new Error('Index out of bounds');
@@ -25,6 +38,10 @@ export class LinkedList<T> implements List<T> {
     return currentNode.val;
   }
 
+  /**
+   * Removes the first element from the list.
+   * @throws Error if the list is empty
+   */
   removeFirst(): void {
     if (!this.head) {
       throw new Error('Index out of bounds');
@@ -36,6 +53,11 @@ export class LinkedList<T> implements List<T> {
     }
   }
 
+  /**
+   * Removes the last element from the list.
+   * Traverses the entire list to find and remove the last element.
+   * @throws Error if the list is empty
+   */
   removeLast(): void {
     if (!this.head) {
       // Empty List
@@ -55,6 +77,10 @@ export class LinkedList<T> implements List<T> {
     }
   }
 
+  /**
+   * Adds an element to the beginning of the list.
+   * @param val - The value to add
+   */
   addFirst(val: T): void {
     const newNode = new Node(val);
     if (this.head) {
@@ -63,6 +89,11 @@ export class LinkedList<T> implements List<T> {
     this.head = newNode;
   }
 
+  /**
+   * Adds an element to the end of the list.
+   * Traverses the entire list to add the element at the end.
+   * @param val - The value to add
+   */
   addLast(val: T): void {
     const newNode = new Node(val);
     if (!this.head) {
@@ -76,6 +107,11 @@ export class LinkedList<T> implements List<T> {
     }
   }
 
+  /**
+   * Checks if the list contains a specific value.
+   * @param val - The value to search for
+   * @returns True if the value exists in the list, false otherwise
+   */
   contains(val: T): boolean {
     if (!this.head) {
       return false;
@@ -96,6 +132,10 @@ export class LinkedList<T> implements List<T> {
     return false;
   }
 
+  /**
+   * Returns the number of elements in the list.
+   * @returns The size of the list
+   */
   size(): number {
     if (!this.head) {
       return 0;
@@ -109,10 +149,20 @@ export class LinkedList<T> implements List<T> {
     return size;
   }
 
+  /**
+   * Adds an element to the end of the list.
+   * This is an alias for addLast.
+   * @param val - The value to add
+   */
   add(val: T): void {
     this.addLast(val);
   }
 
+  /**
+   * Removes the element at the specified index.
+   * @param index - The index of the element to remove
+   * @throws Error if the list is empty or index is out of bounds
+   */
   remove(index: number): void {
     // Error cases
     if (!this.head) {
@@ -139,6 +189,12 @@ export class LinkedList<T> implements List<T> {
     }
   }
 
+  /**
+   * Returns the element at the specified index.
+   * @param index - The index of the element to retrieve
+   * @returns The element at the specified index
+   * @throws Error if the list is empty or index is out of bounds
+   */
   get(index: number): T {
     // Error cases
     if (!this.head) {
@@ -159,6 +215,13 @@ export class LinkedList<T> implements List<T> {
     return currentNode.val;
   }
 
+  /**
+   * Replaces the element at the specified index with a new value.
+   * @param index - The index of the element to replace
+   * @param val - The new value
+   * @returns The previous value at the specified index
+   * @throws Error if the index is out of bounds
+   */
   set(index: number, val: T): T {
     // Returns the value previously at the specified position
     let prev = null;
@@ -182,10 +245,18 @@ export class LinkedList<T> implements List<T> {
     return prev;
   }
 
+  /**
+   * Removes all elements from the list.
+   */
   clear(): void {
     this.head = null;
   }
 
+  /**
+   * Returns the index of the first occurrence of the specified value.
+   * @param val - The value to search for
+   * @returns The index of the value, or -1 if not found
+   */
   indexOf(val: T): number {
     let i = -1;
     if (this.head) {
@@ -207,6 +278,10 @@ export class LinkedList<T> implements List<T> {
     return i;
   }
 
+  /**
+   * Converts the list to an array.
+   * @returns An array containing all elements in the list
+   */
   toArray(): T[] {
     const arr: T[] = [];
 

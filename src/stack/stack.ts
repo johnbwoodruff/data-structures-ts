@@ -1,9 +1,17 @@
 import { Node } from '../common/single-node';
 
+/**
+ * A Last-In-First-Out (LIFO) stack data structure.
+ * @typeparam T - The type of elements stored in the stack
+ */
 export class Stack<T> {
   private top: Node<T> = null;
 
-  push(val: T) {
+  /**
+   * Adds an element to the top of the stack.
+   * @param val - The value to add
+   */
+  push(val: T): void {
     const newNode = new Node(val);
     if (this.top) {
       newNode.next = this.top;
@@ -11,17 +19,29 @@ export class Stack<T> {
     this.top = newNode;
   }
 
-  pop() {
+  /**
+   * Removes the element from the top of the stack.
+   * @throws Error if the stack is empty
+   */
+  pop(): void {
     if (!this.top) {
       throw new Error('Index out of bounds');
     }
     this.top = this.top.next ? this.top.next : null;
   }
 
+  /**
+   * Checks if the stack is empty.
+   * @returns True if the stack contains no elements, false otherwise
+   */
   isEmpty(): boolean {
     return this.top ? false : true;
   }
 
+  /**
+   * Returns the number of elements in the stack.
+   * @returns The size of the stack
+   */
   size(): number {
     let size = 0;
     if (this.top) {
