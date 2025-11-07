@@ -1,17 +1,24 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2022",
     "module": "commonjs",
+    "lib": ["ES2022"],
     "declaration": true,
-    "inlineSourceMap": true,
-    "moduleResolution": "node",
-    "sourceRoot": "./src",
+    "declarationMap": true,
+    "sourceMap": true,
     "outDir": "./dist",
-    "typeRoots": ["node_modules/@types"],
-    "strict": true,
-    "noImplicitAny": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
-    "strictNullChecks": false
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["src/**/*.spec.ts", "node_modules/**"]

@@ -5,9 +5,6 @@ let list: Stack<string>;
 const MICHAEL = 'Michael Scott';
 const DWIGHT = 'Dwight Schrute';
 const JIM = 'Jim Halpert';
-const PAM = 'Pam Beesley';
-const ANGELA = 'Angela Martin';
-const KELLY = 'Kelly Kapoor';
 
 beforeEach(() => {
   list = new Stack<string>();
