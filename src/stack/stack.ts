@@ -31,6 +31,18 @@ export class Stack<T> {
   }
 
   /**
+   * Returns the element at the top of the stack without removing it.
+   * @returns The element at the top of the stack
+   * @throws Error if the stack is empty
+   */
+  peek(): T {
+    if (!this.top) {
+      throw new Error('Stack is empty');
+    }
+    return this.top.val;
+  }
+
+  /**
    * Checks if the stack is empty.
    * @returns True if the stack contains no elements, false otherwise
    */

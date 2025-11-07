@@ -52,3 +52,52 @@ test('should throw an error if trying to pop with no items', () => {
     list.pop();
   }).toThrowError('Index out of bounds');
 });
+
+test('should peek at top element without removing it', () => {
+  list.push(MICHAEL);
+  list.push(DWIGHT);
+  list.push(JIM);
+  expect(list.peek()).toEqual(JIM);
+  expect(list.size()).toEqual(3);
+});
+
+test('should throw an error if trying to peek with no items', () => {
+  expect(() => {
+    list.peek();
+  }).toThrowError('Stack is empty');
+});
+
+test('should verify LIFO order - last in, first out', () => {
+  list.push(MICHAEL);
+  list.push(DWIGHT);
+  list.push(JIM);
+
+  // Most recently pushed (JIM) should be on top
+  expect(list.peek()).toEqual(JIM);
+  list.pop();
+
+  // Second most recently pushed (DWIGHT) should now be on top
+  expect(list.peek()).toEqual(DWIGHT);
+  list.pop();
+
+  // First pushed (MICHAEL) should now be on top
+  expect(list.peek()).toEqual(MICHAEL);
+  list.pop();
+
+  expect(list.isEmpty()).toEqual(true);
+});
+
+test('should maintain LIFO order with interleaved operations', () => {
+  list.push(MICHAEL);
+  list.push(DWIGHT);
+  expect(list.peek()).toEqual(DWIGHT);
+
+  list.pop();
+  expect(list.peek()).toEqual(MICHAEL);
+
+  list.push(JIM);
+  expect(list.peek()).toEqual(JIM);
+
+  list.pop();
+  expect(list.peek()).toEqual(MICHAEL);
+});

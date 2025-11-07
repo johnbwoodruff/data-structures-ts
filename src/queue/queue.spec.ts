@@ -59,3 +59,40 @@ test('should throw on dequeue of empty list', () => {
     list.dequeue();
   }).toThrowError('Queue is empty');
 });
+
+test('should verify FIFO order - first in, first out', () => {
+  list.enqueue(MICHAEL);
+  list.enqueue(DWIGHT);
+  list.enqueue(JIM);
+
+  // First enqueued (MICHAEL) should be at the front
+  expect(list.peek()).toEqual(MICHAEL);
+  list.dequeue();
+
+  // Second enqueued (DWIGHT) should now be at the front
+  expect(list.peek()).toEqual(DWIGHT);
+  list.dequeue();
+
+  // Third enqueued (JIM) should now be at the front
+  expect(list.peek()).toEqual(JIM);
+  list.dequeue();
+
+  expect(list.isEmpty()).toEqual(true);
+});
+
+test('should maintain FIFO order with interleaved operations', () => {
+  list.enqueue(MICHAEL);
+  list.enqueue(DWIGHT);
+  expect(list.peek()).toEqual(MICHAEL);
+
+  list.dequeue();
+  expect(list.peek()).toEqual(DWIGHT);
+
+  list.enqueue(JIM);
+  // DWIGHT should still be at front (was enqueued before JIM)
+  expect(list.peek()).toEqual(DWIGHT);
+
+  list.dequeue();
+  // Now JIM should be at front
+  expect(list.peek()).toEqual(JIM);
+});
