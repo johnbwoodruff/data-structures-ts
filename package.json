@@ -1,7 +1,7 @@
 {
   "name": "data-structures-ts",
   "description": "A collection of data structures, built using TypeScript.",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "main": "dist/index.js",
   "license": "MIT",
   "author": {
